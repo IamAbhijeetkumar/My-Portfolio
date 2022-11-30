@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,500&family=Ubuntu:wght@300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'ubuntu';
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 999;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar .logo img {
+    margin-left: 20px;
+    width: 80%;
+    height: 3em;
+    border-radius: 5em;
+}
+
+.navbar-menu ul li {
+    margin-right: 20px;
+    padding-top: 20px;
+    display: inline-table;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.navbar-menu ul li a {
+    margin: 1px 15px;
+    padding: 15px 10px;
+    justify-content: space-between;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-menu ul li a:hover {
+    color: #48dbfb !important;
+}
+
+section .main {
+    background-image: url('image/R.jfif');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    place-items: center;
+}
+
+section .main h1 {
+    padding-top: 180px;
+    padding-bottom: 50px;
+    color: rgb(248, 246, 246);
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+}
+
+section .main h1::after {
+    content: "Abhijeet kumar";
+    animation: textanim 7s ease-in infinite;
+}
+
+.sticky {
+    background-color: white;
+    padding: 18px 0;
+}
+
+.sticky .navbar-menu a {
+    color: black;
+}
+
+@keyframes textanim {
+    25% {
+        content: " A Web Developer"
+    }
+
+    50% {
+        content: "  Abhijeet Kumar"
+    }
+
+    75% {
+        content: " A Youtuber"
+    }
+}
+
+section .main .btn {
+    margin: auto;
+    /* padding: 15px 0px 10px 30px; */
+    /* background-color:red; */
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 3em;
+}
+
+section .main button {
+    display: inline-block;
+    width: 150px;
+    margin: auto;
+    padding-top: 100;
+    height: 3em;
+    border-radius: 5px;
+    border: 1px solid #48dbfb;
+    background-color: transparent;
+}
+
+section .main button:hover {
+    background-color: #48dbfb;
+}
+
+section .main button a:hover {
+    color: white;
+}
+
+section .main button a {
+    color: #48dbfb;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+section .main .btn ul {
+    margin-bottom: 50px;
+}
+
+section .main .btn ul li {
+    display: inline;
+}
+
+section .main .btn ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 25px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 3px;
+}
+
+label #btn {
+    padding: 10px 10px;
+    margin: auto;
+    right: 0;
+    top: 5px;
+    display: none;
+    border: 1px solid black;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    display: none;
+    margin: auto;
+    right: -100%;
+    border: 1px solid black;
+    top: 5px;
+    font-size: 30px;
+    color: #ffffff;
+    padding: 10px 10px;
+    transition: all .5s ease-out;
+}
+
+#check:checked~.navbar-menu {
+    right: 0;
+}
+
+#check:checked~label #btn {
+    right: 250px;
+    opacity: 0;
+    pointer-events: none;
+    transform: rotate(360deg);
+}
+
+#check:checked~label #cancel {
+    right: 250px;
+    transform: rotate(360deg);
+}
+
+#check:checked~.navbar-menu {
+    margin-left: 250px;
+}
+
+.About {
+    width: 100%;
+    height: 95vh;
+    background-color: whitesmoke;
+    place-items: center;
+}
+
+.About h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'ubuntu';
+    /* text-decoration:underline; */
+    background-color: whitesmoke;
+    font-size: 40px;
+    color: black;
+    font-weight: 900;
+}
+
+.About .container {
+    width: 70%;
+    background-color: whitesmoke;
+    height: 80vh;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    margin: auto;
+}
+
+.About .container .head {
+    width: 100%;
+    display: flex;
+    height: 50%;
+    background-color: whitesmoke;
+}
+
+.About .container .head img {
+    margin: 2.5%;
+    border-radius:50%;
+    width: 22%;
+    height: 80%;
+}
+
+.About .container .head .intro {
+    width: 70%;
+    margin-left: 5%;
+    height: 100%;
+}
+
+.About .container .head .intro .H h2 {
+    font-size: 25px;
+}
+
+.About .container .head .intro .H {
+    width: 100%;
+    margin-top: 2%;
+    font-size: 15px;
+    background-color: whitesmoke;
+    height: 30%;
+}
+
+.About .container .head .intro .B {
+    width: 100%;
+    margin-top: 1%;
+    background-color: whitesmoke;
+    height: 50%;
+}
+
+.About .container .head .intro .B p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.About .container .skills {
+    width: 90%;
+    padding-top: 5%;
+    padding-left:2%;
+    display: flex;
+    height: 40%;
+    background-color: whitesmoke;
+}
+
+.About .container .skills .left {
+    width: 50%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.About .container .skills .parameter {
+    margin: auto;
+    width: 90%;
+    height: 30%;
+    background-color: whitesmoke;
+}
+
+.About .container .skills .parameter h4 {
+    justify-content: space-between;
+    font-size: 15px;
+    display: inline-flex;
+    font-weight: 400;
+}
+
+.About .container .skills .parameter h5 {
+    justify-content: space-between;
+    font-size: 15px;
+    display: inline-flex;
+    font-weight: 400;
+}
+
+.About .container .skills .parameter .line1 {
+    width: 90%;
+    margin-top: 10px;
+    background-color: rgb(219, 214, 214);
+    /* transition: 5s ease; */
+    height: 5px;
+}
+
+.About .container .skills .parameter .line2 {
+    width: 90%;
+    background-color: #15b1c2;
+    height: 5px;
+    transition: 10s ease;
+}
+
+.About .container .skills .parameter .line3 {
+    width: 80%;
+    background-color: #15b1c2;
+    height: 5px;
+    transition: 10s ease;
+}
+
+.About .container .skills .parameter .line4 {
+    width: 70%;
+    background-color: #15b1c2;
+    height: 5px;
+    transition: 10s ease;
+}
+
+.About .container .skills .parameter .line5 {
+    width: 30%;
+    background-color: #15b1c2;
+    height: 5px;
+    transition: 10s ease;
+}
+
+.About .container .skills .right {
+    width: 50%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.container1 {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.container1 .service {
+    width: 100%;
+    /* border:2px solid white; */
+    background-color: black;
+    place-items: center;
+    text-align: center;
+}
+
+.container1 .service h1 {
+    padding-top: 10vh;
+    padding-bottom: 0vh;
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: 500;
+    /* border:2px solid red; */
+}
+
+.container1 .container2 {
+    margin-top: 2%;
+    margin-bottom: 10%;
+    display: inline-flex;
+    width: 80%;
+    justify-content: space-between;
+    height: 60%;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* border:2px solid red; */
+}
+
+.container1 .container2 .left {
+    width: 30%;
+    height: 100%;
+    margin: auto;
+}
+
+.container1 .container2 .right {
+    width: 30%;
+    height: 100%;
+    margin: auto;
+}
+
+.container1 .container2 .m {
+    width: 30%;
+    height: 100%;
+    margin: auto;
+
+}
+
+.container1 .container2 .card {
+    margin-top: 10%;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 40%;
+    border: 2px solid #15b1c2;
+}
+.container1 .container2 .card h5 {
+    font-size: 20px;
+    margin-top: 5%;
+    color: rgb(210, 206, 206);
+    font-weight: bold;
+}
+
+.container1 .container2 .card p {
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 2%;
+    color: rgb(210, 206, 206);
+}
+
+.container1 .container2 .card i {
+    font-size: 55px;
+    margin-top: 15%;
+    color: #15b1c2;
+}
+.container3 {
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.container3 .Education {
+    width: 100%;
+    /* border:5px solid tomato; */
+    background-color: whitesmoke;
+    place-items: center;
+    text-align: center;
+}
+
+.container3 .Education h1 {
+    padding-top: 5vh;
+    padding-bottom: 8vh;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.container3 .container4 {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    display: flex;
+    height: 80%;
+    /* border:2px solid red; */
+}
+
+/* .container3 .container4 .list{
+    height:100%;
+    width:5%
+}
+.container3 .container4 .list span{
+    background-color: black;
+} */
+.container3 .container4 .left {
+    width: 50%;
+    /* border:2px solid purple; */
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.container3 .container4 .left .card2 {
+    width: 90%;
+    height: 25%;
+    padding-top: 5%;
+    padding-left: 5%;
+    background-color: white;
+    margin-bottom: 5%;
+    border: 1px solid grey;
+}
+
+.container3 .container4 .left .card2 h4 {
+    color: black;
+    margin-bottom: 2%;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.container3 .container4 .left .card2 h5 {
+    color: black;
+    font-size: 16px;
+    margin-bottom: 2%;
+    font-weight: 800;
+}
+
+.container3 .container4 .left .card2 p {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.container3 .container4 .right {
+    width: 50%;
+    height: 100%;
+    background-color: whitesmoke;
+    /* border:2px solid green; */
+}
+
+.container3 .container4 .right .card2 {
+    width: 90%;
+    height: 25%;
+    border: 1px solid grey;
+
+    padding-top: 5%;
+    padding-left: 5%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 5%;
+}
+
+.container3 .container4 .right .card2 h4 {
+    color: black;
+    margin-bottom: 2%;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.container3 .container4 .right .card2 h5 {
+    color: black;
+    font-size: 16px;
+    margin-bottom: 2%;
+    font-weight: 800;
+}
+
+.container3 .container4 .right .card2 p {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.container5 {
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+}
+
+.container5 .work {
+    width: 100%;
+    height: 18vh;
+    background-color: black;
+    place-items: center;
+    /* border: 2px solid red; */
+    text-align: center;
+}
+
+.container5 .work h1 {
+    font-size: 30px;
+    padding-top: 5vh;
+    text-decoration: unset;
+    font-weight: 800;
+    color: white;
+}
+
+.container5 .container6 {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 70%;
+}
+
+.container5 .container6 img {
+    width: 30%;
+    border-radius: 10px;
+    margin: 1.5%;
+    height: 42%;
+}
+
+.container5 .container6 img:hover {
+    opacity: 0.5;
+}
+
+.container7 {
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.container7 .contact {
+    width: 100%;
+    height: 15vh;
+    background-color: whitesmoke;
+}
+
+.container7 .contact h1 {
+    color: black;
+    font-size: 30px;
+    font-weight: 800;
+    padding-top: 5vh;
+    place-items: center;
+    text-align: center;
+}
+
+.container7 .container8 {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 70%;
+    background-color: whitesmoke;
+    /* border: 2px solid red; */
+}
+
+.container7 .container8 .H {
+    width: 100%;
+    /* border: 2px solid green; */
+    height: 25%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.container7 .container8 .cardH {
+    width: 31.5%;
+    display: table;
+    background-color: black;
+    /* border: 2px solid green; */
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+
+.container7 .container8 .cardH h5 {
+    color: white;
+    margin-top: 5%;
+    padding-top: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.container7 .container8 .cardH i {
+    color: white;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.container7 .container8 .M {
+    width: 100%;
+    /* border: 2px solid green; */
+    height: 10%;
+    margin-top: 5%;
+    justify-content: space-between;
+    display: flex;
+    /* border:2px solid red; */
+}
+
+.container7 .container8 .M input {
+    width: 49%;
+    color:white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.container7 .container8 .M1 {
+    width: 100%;
+    /* border: 2px solid green; */
+    height: 10%;
+    margin-top: 2%;
+    justify-content: space-between;
+    display: flex;
+    /* border:2px solid red; */
+}
+
+.container7 .container8 .M1 input {
+    width: 100%;
+    color:white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.container7 .container8 .B {
+    width: 100%;
+    /* border: 2px solid green; */
+    height: 30%;
+    margin-top: 2%;
+    justify-content: space-between;
+    display: flex;
+    /* border:2px solid red; */
+}
+
+.container7 .container8 .B input {
+    width: 100%;
+    height: 100%;
+    color:white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.container7 .container8 button {
+    margin-top: 15px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 2px solid #15b1c2;
+    float: right;
+    color: #15b1c2;
+    font-weight: 800;
+}
+.footer{
+    width:100%;
+    height:30vh;
+    background-image: url('image/R.jfif');
+    background-position: center;
+    background-size: cover;
+    place-items: center;
+    text-align: center;
+}
+.footer h5{
+    padding-top:5%;
+    font-size:20px;
+    color:white;
+    font-weight:500;
+}
+.footer a i{
+    margin-top:2%;
+    padding:0.2%;
+    font-size:25px;
+    color:white;
+    font-weight:500;
+}
