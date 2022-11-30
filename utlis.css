@@ -99,6 +99,8 @@
     .About .container .head .intro .H {
         width: 100%;
         height: 30%;
+    }.About .container .head .intro .H h2 {
+        font-size: 20px;
     }
     .About .container .head .intro .B {
         width: 100%;
