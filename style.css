@@ -159,7 +159,6 @@ label #btn {
     right: 0;
     top: 5px;
     display: none;
-    border: 1px solid black;
     font-size: 30px;
     color: rgb(255, 255, 255);
     transition: all .5s;
@@ -170,7 +169,6 @@ label #cancel {
     display: none;
     margin: auto;
     right: -100%;
-    border: 1px solid black;
     top: 5px;
     font-size: 30px;
     color: #ffffff;
